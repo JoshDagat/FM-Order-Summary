@@ -1,6 +1,33 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-family: "Red Hat Display";
+	font-weight: 500;
+	src: url(RedHatDisplay-Medium.ttf);	
+}
+
+@font-face {
+	font-family: "Red Hat Display";
+	font-weight: 700;
+	src: url(RedHatDisplay-Bold.ttf);	
+}
+
+@font-face {
+	font-family: "Red Hat Display";
+	font-weight: 900;
+	src: url(RedHatDisplay-Black.ttf);	
+}
+
 html {
 	display: flex;
 	justify-content: center;
+	font-family: "Red Hat Display", 'Times New Roman', Times, serif;
+	background-color: #E0E8FF;
+
 }
 
 .attribution {
@@ -9,7 +36,7 @@ html {
 }
 
 .attribution a {
-	color: hsl(228, 45%, 44%);
+	color: #3e52a3;
 }
 
 .main {
@@ -21,16 +48,15 @@ html {
 	padding: 0 1.5em;
 
 	background: url(images/pattern-background-mobile.svg);
-	background-color: hsl(225, 100%, 94%);
 	background-repeat: no-repeat;
 	max-width: 375px;
-	border: 1px solid black;
-}
+	}
 
 .card {
-	max-width: 375px;
+	max-width: 327px;
 	border-radius: 20px;
-	border: 1px solid red;
+	background-color: #fff;
+	box-shadow: 0px 40px 40px -20px rgba(13, 48, 189, 0.151826);
 }
 
 .card__img img {
@@ -44,4 +70,107 @@ html {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	text-align: center;
+
+	padding: 1.5rem;
+}
+
+.card__info h2{
+	font-size: calc(22px + 6 * ((100vw - 375px) / 1065));
+	font-weight: 900;
+	margin: 0.36em 0 0.72em 0;
+}
+
+.card__info p{
+	font-weight: 500;
+	color: #717FA6;
+	margin-bottom: 1.5em;
+}
+
+.card__selected-plan{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	background-color: #F7F9FF;
+	border-radius: 11px;
+	width: 100%;
+	padding: 1rem 0;
+	margin-bottom: 1.5em;
+}
+
+.selected-plan__details{
+	display: flex;
+	flex-direction: column;
+}
+
+.selected-plan__details span{
+	font-size: 0.875rem;
+	color: #717FA6;
+}
+.selected-plan__details span:nth-child(1){
+	font-weight: 900;
+	color: #1F2E55;
+}
+
+.card__selected-plan .change {
+	font-size: 0.81rem;
+	font-weight: 900;
+	color: #382AE1;
+}
+.card__selected-plan .change:hover {
+	color: #766CF1;
+	text-decoration: none;	
+}
+
+
+.proceed, .cancel{
+	text-decoration: none;
+}
+
+.proceed{
+	background-color: #382AE1;
+	color: #fff;
+	border-radius: 11px;
+	width: 100%;
+	padding: 1em 0;
+	margin-bottom: 1.5em;
+	box-shadow: 0px 20px 20px rgba(56, 42, 225, 0.190291);
+}
+
+.proceed:hover{
+	background-color: #766CF1;
+}
+
+.proceed span, .cancel span {
+	font-weight: 900;
+}
+
+.cancel span {
+	color: #717FA6;
+}
+
+.cancel span:hover{
+	color: #1F2E55;
+}
+
+@media screen and (min-width: 576px) {
+	.main {
+		max-width: 546px;
+	}
+
+	.card {
+		max-width: 450px;
+	}
+}
+@media screen and (min-width: 768px) {
+	
+}
+@media screen and (min-width: 992px) {
+	
+}
+@media screen and (min-width: 1200px) {
+	
+}
+@media screen and (min-width: 1400px) {
+	
 }
