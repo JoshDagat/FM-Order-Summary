@@ -82,6 +82,7 @@ html {
 }
 
 .card__info p{
+	font-size: calc(15px + 1 *((100vw - 375px) / 1065));
 	font-weight: 500;
 	color: #717FA6;
 	margin-bottom: 1.5em;
@@ -104,7 +105,7 @@ html {
 }
 
 .selected-plan__details span{
-	font-size: 0.875rem;
+	font-size: calc(14px + 2 *((100vw - 375px) / 1065));
 	color: #717FA6;
 }
 .selected-plan__details span:nth-child(1){
@@ -113,7 +114,7 @@ html {
 }
 
 .card__selected-plan .change {
-	font-size: 0.81rem;
+	font-size: calc(13px + 1 *((100vw - 375px) / 1065));
 	font-weight: 900;
 	color: #382AE1;
 }
@@ -162,15 +163,15 @@ html {
 		max-width: 450px;
 	}
 }
-@media screen and (min-width: 768px) {
-	
-}
-@media screen and (min-width: 992px) {
-	
-}
-@media screen and (min-width: 1200px) {
-	
-}
+
 @media screen and (min-width: 1400px) {
-	
+	.card__info h2{
+		font-size: 28px;	
+	}
+	.card__info p, .selected-plan__details span {
+		font-size: 16px;
+	}
+	.card__selected-plan .change {
+		font-size: 14px;
+	}
 }
